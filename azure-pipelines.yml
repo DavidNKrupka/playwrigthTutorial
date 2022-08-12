@@ -47,5 +47,5 @@ steps:
   displayName: Build Projects
   inputs:
       command: 'build'
-      projects: '**/*.sln'
+      projects: '**/*.csproj'
       arguments: '--no-restore -c Release /p:Platform=x64 /p:Version=$(Build.BuildNumber)'
