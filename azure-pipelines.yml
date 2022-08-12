@@ -44,5 +44,8 @@ steps:
     feedsToUse: 'select'
     
 - task: DotNetCoreCLI@2
+  displayName: Build Projects
   inputs:
-    command: 'test'
+      command: 'build'
+      projects: 'playwrightDemo/playwrightDemo.csproj'
+      arguments: '--no-restore -c Release /p:Platform=x64 /p:Version=$(Build.BuildNumber)'
